@@ -70,6 +70,8 @@ player_cnt <- dat %>%
 
 head(player_cnt)
 
+write_csv(player_cnt, "tables/Number of tournaments played.csv")
+
 ggplot(player_cnt, aes(tournaments)) + 
   geom_bar(width=.2, fill="cadetblue") + 
   scale_x_continuous(breaks=1:18)
