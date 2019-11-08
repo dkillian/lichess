@@ -1,6 +1,6 @@
 # lichess prepare
 
-path <- "data/lichess rosters s1-19.xlsx"
+path <- "data/raw/lichess rosters s1-19.xlsx"
 
 sheets <- excel_sheets(path=path)
 
@@ -34,6 +34,6 @@ dat <- merge(board, rating) %>%
   mutate(board=as.numeric(board)) %>%
   na.omit
 
-write_csv(dat, "data/lichess rosters seasons 1-19.csv")
+write_csv(dat, "data/processed/lichess rosters seasons 1-19.csv")
 
 
